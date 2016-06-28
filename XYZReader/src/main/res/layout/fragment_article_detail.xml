@@ -5,9 +5,9 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:id="@+id/appBarLayout">
+        android:layout_height="250dp">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -20,12 +20,12 @@
                 android:layout_height="match_parent"
                 app:layout_collapseMode="pin">
 
-                <ImageView
+                <com.subbu.xyzreader.ui.ThreeTwoImageView
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
-                    android:scaleType="fitXY"
+                    android:layout_height="0dp"
                     android:background="@color/photo_placeholder"
-                    android:layout_height="match_parent" />
+                    android:scaleType="fitXY" />
 
                 <View
                     android:layout_width="match_parent"
@@ -42,10 +42,10 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/nestedScrollView">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -110,16 +110,16 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:layout_gravity="center_vertical|left"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
         android:background="@drawable/add_fab_background"
         android:contentDescription="@string/action_share"
-        android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
         android:stateListAnimator="@anim/fab_state_list_anim"
+        app:elevation="@dimen/fab_elevation"
         app:layout_anchor="@+id/appBarLayout"
         app:layout_anchorGravity="bottom|right" />
 
